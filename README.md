@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# LMS Project
 
-## Getting Started
+A full-stack Learning Management System built using Next.js, MongoDB, and Tailwind CSS.
 
-First, run the development server:
+## Features
+- Authentication with NextAuth.js
+- Student and Admin dashboards
+- Course creation, enrollment, and progress tracking
+- Responsive and modular UI
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech Stack
+- **Framework:** Next.js (App Router)
+- **Database:** MongoDB via Mongoose
+- **Authentication:** NextAuth.js
+- **Styling:** Tailwind CSS
+- **Language:** JavaScript
+
+## Project Structure
+```
+lms-project/
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   └── auth/
+│   │   ├── dashboard/
+│   │   ├── login/
+│   │   ├── globals.css
+│   │   ├── layout.js
+│   │   └── page.js
+│   ├── components/
+│   │   ├── Navbar.js
+│   │   └── CourseCard.js
+│   ├── lib/
+│   │   └── mongodb.js
+│   └── models/
+│       └── User.js
+├── .env.local
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup Instructions
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+git clone https://github.com/yourusername/lms-project.git
+cd lms-project
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment Variables
+Create a `.env.local` file with:
+```
+MONGODB_URI=your_mongodb_connection_string
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your_secret_key
+```
 
-## Learn More
+## Core Modules
+1. **Authentication Module** - User login/logout with NextAuth.js
+2. **Dashboard Module** - Course overview and user management
+3. **UI Components** - Reusable Navbar and CourseCard components
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Development Guidelines
+- Follow JavaScript-only constraint
+- Use App Router for all routing
+- Implement responsive design with Tailwind CSS
+- Maintain modular and scalable code structure
