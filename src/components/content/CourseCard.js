@@ -9,7 +9,7 @@ export default function CourseCard({ course }) {
         <p className="text-gray-600 mb-4 line-clamp-3">
           {course.description}
         </p>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center"> 
           <div className="text-sm text-gray-500">
             <span className="font-medium">{course.instructor}</span>
           </div>

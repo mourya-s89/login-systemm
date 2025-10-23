@@ -1,5 +1,5 @@
 export default function Card({ 
-  children, 
+  children,
   className = '', 
   padding = 'p-6',
   shadow = 'shadow-md'
