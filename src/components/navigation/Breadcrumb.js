@@ -19,6 +19,8 @@ export default function Breadcrumb({ items }) {
             ) : (
               <span className="text-gray-500 text-sm font-medium">
                 {item.name}
+
+                
               </span>
             )}
           </li>
@@ -27,3 +29,5 @@ export default function Breadcrumb({ items }) {
     </nav>
   );
 }
+
+//breadcrumb
